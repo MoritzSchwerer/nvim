@@ -56,3 +56,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>ff", ":Telescope find_files hidden=True<cr>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
+
+-- FTerm
+keymap("n", "<leader>to", "<cmd>lua require('nvterm.terminal').toggle('float')<cr>", opts)
+keymap("t", "<leader>to", "<cmd>lua require('nvterm.terminal').toggle('float')<cr>", opts)
+

@@ -17,14 +17,14 @@ require('telescope').setup{
         -- map actions.which_key to <C-h> (default: <C-/>)
         -- actions.which_key shows the mappings for your picker,
         -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-        ["<C-j>"] = {
-          action = require('telescope.actions').move_selection_next,
-          opts = { nowait = true, silent = true }
-        },
-        ["<C-k>"] = {
-          action = require('telescope.actions').move_selection_previous,
-          opts = { nowait = true, silent = true }
-        },
+--        ["<C-j>"] = {
+--          action = require('telescope.actions').move_selection_next,
+--          opts = { nowait = true, silent = true }
+--        },
+--        ["<C-k>"] = {
+--          action = require('telescope.actions').move_selection_previous,
+--          opts = { nowait = true, silent = true }
+--        },
       }
     }
   },
