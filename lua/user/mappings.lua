@@ -39,6 +39,7 @@ keymap("i", "kj", "<ESC>", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+keymap("v", "kj", "<esc>", opts)
 
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
@@ -52,6 +53,9 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- Turn of highlights
+keymap("n", "<leader>hl", ":nohlsearch<cr>", opts)
+
 --  Telescope
 keymap("n", "<leader>ff", ":Telescope find_files hidden=True<cr>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<cr>", opts)
@@ -61,3 +65,17 @@ keymap("n", "<leader>fb", ":Telescope buffers<cr>", opts)
 -- Floaterm
 keymap("n", "<leader>to", ":ToggleTerm<cr>", opts)
 keymap("t", "<leader>to", [[<C-\><C-n><cmd>ToggleTerm<cr>]], opts)
+
+-- harpoon
+keymap("n", "<leader>a", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
+keymap("n", "<leader>ho", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
+keymap("n", "<leader>gu", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", opts)
+keymap("n", "<leader>gi", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", opts)
+keymap("n", "<leader>go", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", opts)
+keymap("n", "<leader>gp", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", opts)
+
+-- refactoring
+keymap("v", "<leader>ef", "<Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>", opts)
+keymap("n", "<leader>pv", ":lua require('refactoring').debug.print_var({ normal = true })<CR>", opts)
+keymap("v", "<leader>pv", ":lua require('refactoring').debug.print_var({})<CR>", opts)
+keymap("n", "<leader>pc", ":lua require('refactoring').debug.cleanup({})<CR>", opts)

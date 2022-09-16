@@ -54,6 +54,24 @@ return packer.startup(function(use)
 
     use "akinsho/toggleterm.nvim"
 
+    use 'ThePrimeagen/harpoon'
+
+    use {
+        "ThePrimeagen/refactoring.nvim",
+        requires = {
+            {"nvim-lua/plenary.nvim"},
+            {"nvim-treesitter/nvim-treesitter"}
+        }
+    }
+
+    use { "p00f/nvim-ts-rainbow", requires = { {"nvim-treesitter"} } }
+
+    use "windwp/nvim-autopairs"
+
+    use "numToStr/Comment.nvim"
+
+    -- use "lukas-reineke/indent-blankline.nvim"
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
