@@ -52,7 +52,7 @@ return packer.startup(function(use)
 
     use "neovim/nvim-lspconfig"
 
-    use "NvChad/nvterm"
+    use "akinsho/toggleterm.nvim"
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

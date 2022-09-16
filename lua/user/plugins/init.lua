@@ -1,5 +1,5 @@
-require "user.plugins.telescope"
 require "user.plugins.theme"
 require "user.plugins.pyright"
+require "user.plugins.telescope"
 require "user.plugins.treesitter"
-require "user.plugins.nvterm"
+require "user.plugins.toggleterm"

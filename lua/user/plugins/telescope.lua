@@ -1,3 +1,4 @@
+local actions = require('telescope.actions')
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = { ".local", ".cache", ".anaconda", ".docker", ".conda", "go" },
@@ -9,22 +10,11 @@ require('telescope').setup{
         prompt_position = 'top',
         preview_width = 0.5,
         anchor = 'S',
-
-
     },
     mappings = {
       i = {
-        -- map actions.which_key to <C-h> (default: <C-/>)
-        -- actions.which_key shows the mappings for your picker,
-        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
---        ["<C-j>"] = {
---          action = require('telescope.actions').move_selection_next,
---          opts = { nowait = true, silent = true }
---        },
---        ["<C-k>"] = {
---          action = require('telescope.actions').move_selection_previous,
---          opts = { nowait = true, silent = true }
---        },
+        ["<c-j>"] = actions.move_selection_next,
+        ["<c-k>"] = actions.move_selection_previous,
       }
     }
   },
